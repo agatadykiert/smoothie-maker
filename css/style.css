@@ -1,0 +1,76 @@
+body{
+  font-family: 'Exo 2', sans-serif;
+}
+header{
+  display: flex;
+  justify-content: center;
+}
+li{
+  list-style: none;
+}
+.container{
+  display: flex;
+}
+.fruits{
+  width: 10%
+}
+.banana{
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/banana.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.apple{
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/apple.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.carrot{
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/carrot.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.kiwi{
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/kiwi.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.lemon{
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/lemon.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.orange{
+  width: 100px;
+  height: 100px;
+  background-image: url("../images/orange.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.blender{
+  width: 70%;
+  height: 500px;
+  background-image: url("../images/blender.png");
+  background-size: 25%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.box{
+  width: 20%;
+}
