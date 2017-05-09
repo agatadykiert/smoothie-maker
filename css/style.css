@@ -8,6 +8,9 @@ header{
 li{
   list-style: none;
 }
+button{
+  margin-left: 50%;
+}
 .container{
   display: flex;
 }
@@ -67,10 +70,37 @@ li{
   width: 70%;
   height: 500px;
   background-image: url("../images/blender.png");
-  background-size: 25%;
+  background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;
+  margin-left: 20%;
 }
-.box{
+.box-middle{
+  width: 70%;
+}
+.box-right{
   width: 20%;
+}
+@keyframes shake {
+  0% {
+    transform: skewX(0);
+  }
+  20% {
+    transform: skewX(10deg);
+  }
+  80% {
+    transform: skewX(-10deg);
+  }
+  100% {
+    transform: skewX(0);
+  }
+}
+.shaking {
+  animation-name: shake;
+  transform-origin: bottom;
+  animation-duration: 50ms;
+  animation-iteration-count: 5;
+}
+.nutritions {
+  display: none;
 }
