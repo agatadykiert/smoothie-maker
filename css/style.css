@@ -1,16 +1,35 @@
+@font-face {
+	font-family: 'BioRhyme';
+	src: url('BioRhyme-ExtraBold.eot');
+	src: local('BioRhyme-ExtraBold'),
+		url('../fonts/BioRhyme-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BioRhyme-ExtraBold.woff2') format('woff2'),
+		url('../fonts/BioRhyme-ExtraBold.woff') format('woff'),
+		url('../fonts/BioRhyme-ExtraBold.ttf') format('truetype'),
+		url('../fonts/BioRhyme-ExtraBold.svg#BioRhyme-ExtraBold') format('svg');
+	font-weight: 800;
+	font-style: normal;
+}
 body{
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'BioRhyme', serif;
 }
 header{
   display: flex;
   justify-content: center;
 }
+h1{
+  color: lightgreen;
+}
 li{
   list-style: none;
   padding: 5px;
+  color: deepskyblue;
 }
-button{
-  margin-left: 50%;
+h2{
+  color: deeppink;
+}
+h3{
+  color: mediumorchid;
 }
 ul{
   padding-left: 10px;
@@ -82,6 +101,7 @@ ul{
 .click{
   padding-top: 300px;
   margin-left: 0px;
+  color: red;
 }
 .box-left{
   width: 30%;
