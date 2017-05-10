@@ -7,9 +7,13 @@ header{
 }
 li{
   list-style: none;
+  padding: 5px;
 }
 button{
   margin-left: 50%;
+}
+ul{
+  padding-left: 10px;
 }
 .container{
   display: flex;
@@ -67,16 +71,24 @@ button{
   background-repeat: no-repeat;
 }
 .blender{
-  width: 70%;
+  width: 80%;
   height: 500px;
   background-image: url("../images/blender.png");
   background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;
-  margin-left: 20%;
+  margin-left: 0px;
+}
+.click{
+  padding-top: 300px;
+  margin-left: 0px;
+}
+.box-left{
+  width: 30%;
 }
 .box-middle{
-  width: 70%;
+  width: 50%;
+  display: flex;
 }
 .box-right{
   width: 20%;

@@ -8,8 +8,6 @@ var lemon = document.querySelector(".lemon");
 var orange = document.querySelector(".orange");
 var choice = document.querySelector(".choice");
 var nutritions = document.querySelector(".nutritions");
-var button = document.querySelector("button");
-var blender = document.querySelector(".blender");
 var cal = document.querySelector("#cal");
 var fib = document.querySelector("#fib");
 var pot = document.querySelector("#pot");
@@ -97,12 +95,14 @@ var vitC = document.querySelector("#vitC");
     vitA.innerText = parseInt(vitA.innerText) + parseInt(orangeObj.vitA);
     vitC.innerText = parseInt(vitC.innerText) + parseInt(orangeObj.vitC);
   })
-  button.addEventListener("click", function() {
-    var blender = document.querySelector(".blender");
-    blender.classList.add("shaking");
+  $('.blender').on('click', function() {
+    var element = $(this);
+    var newElement = element.clone(true);
+    element.before(newElement);
+    $(newElement).addClass('shaking');
+    element.remove();
     nutritions.style.display = "block";
   })
-
 var Fruit = function(name, cal, fib, pot, mag, sod, calc, vitA, vitC){
   this.name = name;
   this.calories = cal;
