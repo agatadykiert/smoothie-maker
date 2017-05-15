@@ -6,8 +6,10 @@ var carrot = document.querySelector(".carrot");
 var kiwi = document.querySelector(".kiwi");
 var lemon = document.querySelector(".lemon");
 var orange = document.querySelector(".orange");
+var pear = document.querySelector(".pear");
 var choice = document.querySelector(".choice");
 var nutritions = document.querySelector(".nutritions");
+var button = document.querySelector("button");
 var cal = document.querySelector("#cal");
 var fib = document.querySelector("#fib");
 var pot = document.querySelector("#pot");
@@ -95,13 +97,49 @@ var vitC = document.querySelector("#vitC");
     vitA.innerText = parseInt(vitA.innerText) + parseInt(orangeObj.vitA);
     vitC.innerText = parseInt(vitC.innerText) + parseInt(orangeObj.vitC);
   })
+  pear.addEventListener("click", function() {
+
+    newLi = document.createElement("li");
+    newLi.innerHTML = pearObj.name;
+    choice.appendChild(newLi);
+    cal.innerText = parseInt(cal.innerText) + parseInt(pearObj.calories);
+    fib.innerText = parseInt(fib.innerText) + parseInt(pearObj.fiber);
+    pot.innerText = parseInt(pot.innerText) + parseInt(pearObj.potassium);
+    mag.innerText = parseInt(mag.innerText) + parseInt(pearObj.magnesium);
+    sod.innerText = parseInt(sod.innerText) + parseInt(pearObj.sodium);
+    calc.innerText = parseInt(calc.innerText) + parseInt(pearObj.calcium);
+    vitA.innerText = parseInt(vitA.innerText) + parseInt(pearObj.vitA);
+    vitC.innerText = parseInt(vitC.innerText) + parseInt(pearObj.vitC);
+  })
   $('.blender').on('click', function() {
     var element = $(this);
     var newElement = element.clone(true);
     element.before(newElement);
     $(newElement).addClass('shaking');
+    $(newElement).data('clicked', 'true');
     element.remove();
     nutritions.style.display = "block";
+    button.style.display = "block";
+  })
+/*  if($('.blender').data('clicked')){
+  /*  $('.banana').on('click', function(event){
+      event.preventDefault();
+    });
+    consle.log('yes');
+  } */
+
+  $('button').on('click', function() {
+    $('.choice').children('li').remove();
+    nutritions.style.display = "none";
+    button.style.display = "none";
+    cal.innerText = 0;
+    fib.innerText = 0;
+    pot.innerText = 0;
+    mag.innerText = 0;
+    sod.innerText = 0;
+    calc.innerText = 0;
+    vitA.innerText = 0;
+    vitC.innerText = 0;
   })
 var Fruit = function(name, cal, fib, pot, mag, sod, calc, vitA, vitC){
   this.name = name;
@@ -120,5 +158,5 @@ var carrotObj = new Fruit("carrot", 20, 1.40, 160, 6, 35, 16, 8353, 3);
 var kiwiObj = new Fruit("kiwi", 43, 2.10, 218, 12.8, 2.25, 25.5, 65.2, 65);
 var lemonObj = new Fruit("lemon", 28, 2.25, 138, 8, 2, 26, 22, 60);
 var orangeObj = new Fruit("orange", 122, 5.52, 434.4, 2.4, 0, 120, 540, 128);
-
+var pearObj = new Fruit("pear", 74, 4, 150, 9, 1.3, 11.7, 32.5, 5.6);
 });
