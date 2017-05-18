@@ -7,6 +7,9 @@ var kiwi = document.querySelector(".kiwi");
 var lemon = document.querySelector(".lemon");
 var orange = document.querySelector(".orange");
 var pear = document.querySelector(".pear");
+var strawberry = document.querySelector(".strawberry");
+var pineapple = document.querySelector(".pineapple");
+var raspberry = document.querySelector(".raspberry");
 var choice = document.querySelector(".choice");
 var nutritions = document.querySelector(".nutritions");
 var button = document.querySelector("button");
@@ -98,7 +101,6 @@ var vitC = document.querySelector("#vitC");
     vitC.innerText = parseInt(vitC.innerText) + parseInt(orangeObj.vitC);
   })
   pear.addEventListener("click", function() {
-
     newLi = document.createElement("li");
     newLi.innerHTML = pearObj.name;
     choice.appendChild(newLi);
@@ -111,23 +113,54 @@ var vitC = document.querySelector("#vitC");
     vitA.innerText = parseInt(vitA.innerText) + parseInt(pearObj.vitA);
     vitC.innerText = parseInt(vitC.innerText) + parseInt(pearObj.vitC);
   })
+  strawberry.addEventListener("click", function() {
+    newLi = document.createElement("li");
+    newLi.innerHTML = strawberryObj.name;
+    choice.appendChild(newLi);
+    cal.innerText = parseInt(cal.innerText) + parseInt(strawberryObj.calories);
+    fib.innerText = parseInt(fib.innerText) + parseInt(strawberryObj.fiber);
+    pot.innerText = parseInt(pot.innerText) + parseInt(strawberryObj.potassium);
+    mag.innerText = parseInt(mag.innerText) + parseInt(strawberryObj.magnesium);
+    sod.innerText = parseInt(sod.innerText) + parseInt(strawberryObj.sodium);
+    calc.innerText = parseInt(calc.innerText) + parseInt(strawberryObj.calcium);
+    vitA.innerText = parseInt(vitA.innerText) + parseInt(strawberryObj.vitA);
+    vitC.innerText = parseInt(vitC.innerText) + parseInt(strawberryObj.vitC);
+  })
+  pineapple.addEventListener("click", function() {
+    newLi = document.createElement("li");
+    newLi.innerHTML = pineappleObj.name;
+    choice.appendChild(newLi);
+    cal.innerText = parseInt(cal.innerText) + parseInt(pineappleObj.calories);
+    fib.innerText = parseInt(fib.innerText) + parseInt(pineappleObj.fiber);
+    pot.innerText = parseInt(pot.innerText) + parseInt(pineappleObj.potassium);
+    mag.innerText = parseInt(mag.innerText) + parseInt(pineappleObj.magnesium);
+    sod.innerText = parseInt(sod.innerText) + parseInt(pineappleObj.sodium);
+    calc.innerText = parseInt(calc.innerText) + parseInt(pineappleObj.calcium);
+    vitA.innerText = parseInt(vitA.innerText) + parseInt(pineappleObj.vitA);
+    vitC.innerText = parseInt(vitC.innerText) + parseInt(pineappleObj.vitC);
+  })
+  raspberry.addEventListener("click", function() {
+    newLi = document.createElement("li");
+    newLi.innerHTML = raspberryObj.name;
+    choice.appendChild(newLi);
+    cal.innerText = parseInt(cal.innerText) + parseInt(raspberryObj.calories);
+    fib.innerText = parseInt(fib.innerText) + parseInt(raspberryObj.fiber);
+    pot.innerText = parseInt(pot.innerText) + parseInt(raspberryObj.potassium);
+    mag.innerText = parseInt(mag.innerText) + parseInt(raspberryObj.magnesium);
+    sod.innerText = parseInt(sod.innerText) + parseInt(raspberryObj.sodium);
+    calc.innerText = parseInt(calc.innerText) + parseInt(raspberryObj.calcium);
+    vitA.innerText = parseInt(vitA.innerText) + parseInt(raspberryObj.vitA);
+    vitC.innerText = parseInt(vitC.innerText) + parseInt(raspberryObj.vitC);
+  })
   $('.blender').on('click', function() {
     var element = $(this);
     var newElement = element.clone(true);
     element.before(newElement);
     $(newElement).addClass('shaking');
-    $(newElement).data('clicked', 'true');
     element.remove();
     nutritions.style.display = "block";
     button.style.display = "block";
   })
-/*  if($('.blender').data('clicked')){
-  /*  $('.banana').on('click', function(event){
-      event.preventDefault();
-    });
-    consle.log('yes');
-  } */
-
   $('button').on('click', function() {
     $('.choice').children('li').remove();
     nutritions.style.display = "none";
@@ -159,4 +192,7 @@ var kiwiObj = new Fruit("kiwi", 43, 2.10, 218, 12.8, 2.25, 25.5, 65.2, 65);
 var lemonObj = new Fruit("lemon", 28, 2.25, 138, 8, 2, 26, 22, 60);
 var orangeObj = new Fruit("orange", 122, 5.52, 434.4, 2.4, 0, 120, 540, 128);
 var pearObj = new Fruit("pear", 74, 4, 150, 9, 1.3, 11.7, 32.5, 5.6);
+var strawberryObj = new Fruit("strawberry", 32, 0, 153, 13, 1, 16, 12, 59);
+var pineappleObj = new Fruit("pineapple", 20, 0, 35, 4, 0, 4, 20, 15);
+var raspberryObj = new Fruit("raspberry", 52, 0, 151, 22, 1, 25, 33, 26.2);
 });
